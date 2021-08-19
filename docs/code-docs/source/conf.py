@@ -83,5 +83,5 @@ autodoc_mock_imports = []
 MODULE_NAMES = ["torch", "apex", "mpi4py", "tensorboardX", "numpy", "cupy"]
 import mock
 for mod_name in MODULE_NAMES:
-    sys.module[mod_name] = mock.Mock()
+    sys.modules[mod_name] = mock.Mock()
 
