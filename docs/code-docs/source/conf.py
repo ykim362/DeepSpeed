@@ -79,9 +79,8 @@ add_module_names = True
 
 autoclass_content = 'both'
 
-autodoc_mock_imports = [] 
-MODULE_NAMES = ["torch", "apex", "mpi4py", "tensorboardX", "numpy", "cupy"]
+autodoc_mock_imports = ["torch", "apex", "mpi4py", "tensorboardX", "numpy", "cupy"]
 import mock
-for mod_name in MODULE_NAMES:
+for mod_name in autodoc_mock_imports: 
     sys.modules[mod_name] = mock.Mock()
 
